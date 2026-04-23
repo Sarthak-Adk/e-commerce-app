@@ -5,7 +5,9 @@ export default function Hero (){
         <>
      
       <Slider/>
+<div className="bg-blue-200 h-20">
 
+</div>
  
         </>
     )
