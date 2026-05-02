@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronDown } from "@deemlol/next-icons";
+import Link from "next/link"
 
 
 const slides = [
@@ -44,6 +45,7 @@ function Hero() {
   }, [isClient]);
 
   return (
+    <>
     <div className="container flex justify-center px-22 gap-[180px] ">
       
       {/* LEFT */}
@@ -101,6 +103,22 @@ function Hero() {
         />
       </section>
     </div>
+
+    <div>
+      
+<section className="flex justify-center px-22 gap-[30px] mt-8">
+  <Link href=""><div className="flex gap-2 border border-black-1px py-6 px-[195PX]">
+    <Image src="/icons/hero_tag.png" alt="hero_tage" height={24} width={24}/>
+ <p>   Discover our collection </p> 
+  </div></Link>
+ <Link href=""> <div className="flex gap-2 border border-black-1px py-6 px-[195px]">
+      <Image src="/icons/hero_discount.png" alt="hero_tage" height={24} width={24}/>
+    <p >Huges discount for All</p>
+  </div></Link>
+</section>
+    </div>
+
+    </>
   );
 }
 
